@@ -1,9 +1,9 @@
 <div class="container">
-    <div *ngFor="let slide of slides" class="slide">
-        <div [ngStyle]="{'background-image': 'url(' + imgFolderSlide+slide.img + ')'}"
+    <div *ngFor="let preference of preferences" class="slide">
+        <div [ngStyle]="{'background-image': 'url(' + imgFolderSlide+preference.bgimage + ')'}"
             [ngClass]="{'bgslide': true,
                          'transition': true,
-                         'bgslideDisplay': getFileName(slide.img) == activeTheme,
-                         'bgslideHidden': getFileName(slide.img) != activeTheme}"></div>
+                         'bgslideDisplay': getFileName(preference.bgimage) == activeTheme,
+                         'bgslideHidden': getFileName(preference.bgimage) != activeTheme}"></div>
     </div>
 </div>

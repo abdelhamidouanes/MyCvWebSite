@@ -1,3 +1,5 @@
+import { ThemePreferences } from './../Models/ThemePreferences.model';
+import { ThemePreferencesService } from '../Services/themePreferences.service';
 import { Subscription } from 'rxjs';
 import { BgService } from './../Services/bg.service';
 import { imgFolderSlide } from './../Services/constantes.service';
@@ -15,14 +17,10 @@ export class SliderComponent implements OnInit, OnDestroy {
   activeTheme: string;
   activeThemeSubscription: Subscription;
 
-  slides = [
-    { img: '1.jpg' },
-    { img: '2.jpg' },
-    { img: '3.jpg' },
-    { img: '4.jpg' }
-  ];
+  preferences: ThemePreferences[];
+  preferencesSubscription: Subscription;
 
-  constructor(private bgService: BgService) { }
+  constructor(private bgService: BgService, private themePreferencesService: ThemePreferencesService) { }
 
   ngOnInit(): void {
     this.imgFolderSlide = imgFolderSlide;
@@ -31,6 +29,11 @@ export class SliderComponent implements OnInit, OnDestroy {
       activeTheme => this.activeTheme = activeTheme
     );
     this.bgService.emitActriveTheme();
+
+    this.preferencesSubscription = this.themePreferencesService.preferencesSubject.subscribe(
+      preferences => this.preferences = preferences
+    );
+    this.themePreferencesService.emitPreferences();
   }
 
   ngOnDestroy(): void {
