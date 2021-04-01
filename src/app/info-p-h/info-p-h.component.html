@@ -1,0 +1,11 @@
+<div class="container">
+    <img [ngClass]="{'profilepic': true,
+                     'imgHidden': afficheMenu === 'true',
+                     'imgDisplay': afficheMenu === 'false'}"
+    [src]="imgFolder + 'profilepic.jpg'" alt="Abdelhamid Ouanes">
+    <div [ngClass]="{'profilepicremplace': true,
+                     'divHidden': afficheMenu === 'false',
+                     'divDisplay': afficheMenu === 'true'}"></div>
+    <h1>Abdelhamid Ouanes</h1>
+    <h2>Développeur full stack, Consultant informatique, Développeur logiciel</h2>
+</div> 

@@ -1,0 +1,16 @@
+<div class="container transition">
+    <nav>
+        <ul>
+                <li><div class="elementcontainer">Mon LinkedIn</div></li>
+                <li class="menuElement"><div class="elementcontainer">A propos</div></li>
+                <li class="menuElement"><div class="elementcontainer">Compétences</div></li>
+                <li class="menuElement"><div class="elementcontainer">Expérience</div></li>
+                <li class="menuElement"><div class="elementcontainer">Formation</div></li>
+                <li class="menuElement"><div class="elementcontainer">Contact</div></li>
+                <li [ngClass]="{'menuBarsHidden': afficheMenu === 'true',
+                                'menuBarsDisplay': afficheMenu === 'false'}" (click)="afficheCacherMenu()"><div class="elementcontainer"><i class="fas fa-bars"></i></div></li>
+                <li [ngClass]="{'menuXHidden': afficheMenu === 'false',
+                                'menuXDisplay': afficheMenu === 'true'}" (click)="afficheCacherMenu()"><div class="elementcontainer"><i class="fas fa-times"></i></div></li>
+        </ul>
+    </nav>
+</div> 
