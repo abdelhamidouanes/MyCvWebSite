@@ -32,22 +32,22 @@
 .one-socialbtn-containerfb:hover {
   background-color: white;
   font-size: 2.2rem;
-  color: #4267b2;
+  color: var(--fb-color);
 }
 .one-socialbtn-containeris:hover {
   background-color: white;
   font-size: 2.2rem;
-  color: #c13584;
+  color: var(--insta-color);
 }
 .one-socialbtn-containerin:hover {
   background-color: white;
   font-size: 2.2rem;
-  color: #0077b5;
+  color: var(--linkedin-color);
 }
 .one-socialbtn-containergh:hover {
   background-color: white;
   font-size: 2.2rem;
-  color: #bd2c00;
+  color: var(--github-color);
 }
 
 @media all and (min-width: 800px) and (max-width: 1024px) {

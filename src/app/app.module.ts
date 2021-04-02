@@ -23,8 +23,6 @@ import { FeelfreeCComponent } from './feelfree-c/feelfree-c.component';
 import { DetailCComponent } from './detail-c/detail-c.component';
 import { OneelementDCComponent } from './oneelement-d-c/oneelement-d-c.component';
 import { FooterComponent } from './footer/footer.component';
-import { CopyrightFComponent } from './copyright-f/copyright-f.component';
-import { SocialmediaFComponent } from './socialmedia-f/socialmedia-f.component';
 import { BgService } from './Services/bg.service';
 import { Nav2HComponent } from './nav2-h/nav2-h.component';
 import { AfficheMenuService } from './Services/afficheMenu.service';
@@ -56,8 +54,6 @@ import { ThemePreferencesService } from './Services/themePreferences.service';
     DetailCComponent,
     OneelementDCComponent,
     FooterComponent,
-    CopyrightFComponent,
-    SocialmediaFComponent,
     Nav2HComponent,
     NavigateButtonComponent,
     SliderComponent
