@@ -7,12 +7,14 @@
         <app-nav-h></app-nav-h>
         <app-nav2-h [ngClass]="{'nav2': true,
                                 'nav2Display': afficheMenu === 'true',
-                                'nav2Hidden': afficheMenu === 'false'}" ></app-nav2-h>
-        <app-navigate-button class="navigate-button"></app-navigate-button>  
-        <app-socialbutton-h class="socialbutton"></app-socialbutton-h>                                            
+                                'nav2Hidden': afficheMenu === 'false'}" ></app-nav2-h>                                            
     <main>
-        <router-outlet></router-outlet>
+        <router-outlet>
+            <app-navigate-button class="navigate-button"></app-navigate-button>
+            <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
+        </router-outlet>
     </main>
+    <app-information class="information"></app-information>
     <app-footer></app-footer>
 </div>
  

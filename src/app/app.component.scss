@@ -2,28 +2,29 @@
   position: relative;
   --time-transition: 1s;
   --hauteur-slider: 530px;
+  --theme-contenu-width: 80%;
 }
 .container-var1 {
   --theme-nav-color: rgb(202, 184, 160, 0.6);
   --theme-nav-height: 60px;
   --theme-nav-li-bgcolor: rgba(131, 97, 57, 0.116);
-  --theme-navigate-button-color: rgba(131, 97, 57, 0.301);
-  --theme-navigate-button-bg: rgba(187, 183, 179, 0.534);
-  --theme-contenu-width: 80%;
+  --theme-navigate-button-color: rgba(82, 57, 29, 0.301);
+  --theme-navigate-button-bg: rgba(190, 167, 143, 0.534);
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
   --color-recruter-buttons: rgb(202, 184, 160);
+  --theme-box-shadow: rgba(202, 184, 160, 0.705);
 }
 .container-var2 {
   --theme-nav-color: rgba(132, 214, 152, 0.6);
   --theme-nav-height: 60px;
   --theme-nav-li-bgcolor: rgba(30, 153, 61, 0.233);
   --theme-navigate-button-color: rgba(38, 110, 56, 0.6);
-  --theme-navigate-button-bg: rgba(129, 151, 135, 0.178);
-  --theme-contenu-width: 80%;
+  --theme-navigate-button-bg: rgba(83, 114, 92, 0.233);
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
   --color-recruter-buttons: rgb(100, 163, 116);
+  --theme-box-shadow: rgba(47, 197, 85, 0.377);
 }
 .container-var3 {
   --theme-nav-color: rgba(38, 67, 80, 0.6);
@@ -31,10 +32,10 @@
   --theme-nav-li-bgcolor: rgba(12, 48, 65, 0.486);
   --theme-navigate-button-color: rgba(17, 51, 65, 0.822);
   --theme-navigate-button-bg: rgba(131, 163, 179, 0.664);
-  --theme-contenu-width: 80%;
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
   --color-recruter-buttons: rgb(94, 123, 134);
+  --theme-box-shadow: rgba(99, 164, 190, 0.432);
 }
 .container-var4 {
   --theme-nav-color: rgba(120, 0, 0, 0.6);
@@ -42,10 +43,10 @@
   --theme-nav-li-bgcolor: rgba(56, 4, 4, 0.76);
   --theme-navigate-button-color: rgba(63, 8, 8, 0.904);
   --theme-navigate-button-bg: rgba(122, 71, 71, 0.904);
-  --theme-contenu-width: 80%;
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
   --color-recruter-buttons: rgb(71, 20, 20);
+  --theme-box-shadow: rgba(243, 56, 56, 0.212);
 }
 .slider {
   width: 100%;
@@ -57,14 +58,14 @@
 .socialbutton {
   z-index: 5000;
   position: absolute;
-  top: var(--hauteur-slider);
+  bottom: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
 main {
   position: relative;
   width: 100%;
-  height: 530px;
+  height: fit-content;
 }
 .nav2 {
   position: absolute;
@@ -89,6 +90,12 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 5000;
+}
+.information {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media all and (max-width: 600px) {
   .nav2Display {
