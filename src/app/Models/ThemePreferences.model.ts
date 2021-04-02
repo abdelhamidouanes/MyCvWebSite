@@ -1,4 +1,4 @@
 export class ThemePreferences{
-    constructor(public bgimage) {
+    constructor(public bgImage) {
     }
 }

@@ -30,6 +30,8 @@ import { Nav2HComponent } from './nav2-h/nav2-h.component';
 import { AfficheMenuService } from './Services/afficheMenu.service';
 import { NavigateButtonComponent } from './navigate-button/navigate-button.component';
 import { SliderComponent } from './slider/slider.component';
+import { ProfilePicService } from './Services/profilePic.service';
+import { ThemePreferencesService } from './Services/themePreferences.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,7 @@ import { SliderComponent } from './slider/slider.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [BgService, AfficheMenuService],
+  providers: [BgService, AfficheMenuService, ProfilePicService, ThemePreferencesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

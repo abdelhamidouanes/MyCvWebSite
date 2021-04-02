@@ -2,8 +2,9 @@ import { ThemePreferences } from './../Models/ThemePreferences.model';
 import { ThemePreferencesService } from '../Services/themePreferences.service';
 import { Subscription } from 'rxjs';
 import { BgService } from './../Services/bg.service';
-import { imgFolderSlide } from './../Services/constantes.service';
+import { imgFolderBG } from '../Services/constantes';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { getFileName } from '../Services/methodeStatic';
 
 @Component({
   selector: 'app-slider',
@@ -23,7 +24,7 @@ export class SliderComponent implements OnInit, OnDestroy {
   constructor(private bgService: BgService, private themePreferencesService: ThemePreferencesService) { }
 
   ngOnInit(): void {
-    this.imgFolderSlide = imgFolderSlide;
+    this.imgFolderSlide = imgFolderBG;
 
     this.activeThemeSubscription = this.bgService.activeThemeSubject.subscribe(
       activeTheme => this.activeTheme = activeTheme
@@ -40,8 +41,8 @@ export class SliderComponent implements OnInit, OnDestroy {
     this.activeThemeSubscription.unsubscribe();
   }
 
-  getFileName(fileName: string): string{
-    return fileName.split('.').slice(0, -1).join('.');
+  getFileNameStatic(fileName: string): string{
+    return getFileName(fileName);
   }
 
 }

@@ -9,10 +9,10 @@ export class ThemePreferencesService{
 
     constructor() {
         this.preferences = [
-            { bgimage: '1.jpg' },
-            { bgimage: '2.jpg' },
-            { bgimage: '3.jpg' },
-            { bgimage: '4.jpg' }
+            { bgImage: '1.jpg' },
+            { bgImage: '2.jpg' },
+            { bgImage: '3.jpg' },
+            { bgImage: '4.jpg' }
         ];
      }
 

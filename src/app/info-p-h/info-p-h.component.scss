@@ -1,7 +1,14 @@
 .profilepic {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 50%;
   width: 150px;
-  filter: brightness(0.8) contrast(1.28) sepia(0.35);
+}
+.profilepicremplace {
+  width: 150px;
+  height: 150px;
 }
 .container {
   display: flex;
@@ -29,11 +36,16 @@
 .imgDisplay {
   display: flex;
 }
-.divHidden {
-  display: none;
+.profilePicHidden {
+  opacity: 0;
+  filter: grayscale(100%);
 }
-.divDisplay {
-  display: none;
+.profilePicDisplay {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+.transition {
+  transition: all var(--time-transition) ease-in;
 }
 @media all and (min-width: 800px) and (max-width: 1024px) {
   .container {
@@ -48,6 +60,10 @@
   .profilepic {
     width: 140px;
   }
+  .profilepicremplace {
+    width: 140px;
+    height: 140px;
+  }
 }
 @media all and (min-width: 601px) and (max-width: 800px) {
   .container {
@@ -61,6 +77,10 @@
   }
   .profilepic {
     width: 120px;
+  }
+  .profilepicremplace {
+    width: 120px;
+    height: 120px;
   }
 }
 @media all and (max-width: 600px) {
@@ -84,12 +104,6 @@
     display: none;
   }
   .imgDisplay {
-    display: flex;
-  }
-  .divHidden {
-    display: none;
-  }
-  .divDisplay {
     display: flex;
   }
 }
