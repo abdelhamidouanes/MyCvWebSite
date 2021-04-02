@@ -17,10 +17,16 @@ p {
 h5::after {
   content: " :";
 }
-.element-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.element-right-grid {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+.element-right-grid h5 {
+  grid-column: 1/2;
+}
+.element-right-grid p {
+  grid-column: 2/3;
+  text-align: right;
 }
 #adresse {
   display: grid;
@@ -41,6 +47,9 @@ h5::after {
   grid-column: 2/3;
   text-align: right;
   padding: 0px;
+}
+.mail i {
+  font-size: 0rem;
 }
 @media all and (min-width: 800px) and (max-width: 1024px) {
   p {
