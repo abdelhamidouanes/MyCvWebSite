@@ -38,11 +38,9 @@
 }
 .profilePicHidden {
   opacity: 0;
-  filter: grayscale(100%);
 }
 .profilePicDisplay {
   opacity: 1;
-  filter: grayscale(0%);
 }
 .transition {
   transition: all var(--time-transition) ease-in;

@@ -3,12 +3,13 @@
                  'container-var2': activeTheme === '2',
                  'container-var3': activeTheme === '3',
                  'container-var4': activeTheme === '4'}">    
-    <app-slider class="slider"></app-slider>
+        <app-slider class="slider"></app-slider>
         <app-nav-h></app-nav-h>
         <app-nav2-h [ngClass]="{'nav2': true,
                                 'nav2Display': afficheMenu === 'true',
                                 'nav2Hidden': afficheMenu === 'false'}" ></app-nav2-h>
-        <app-navigate-button class="navigate-button"></app-navigate-button>                                              
+        <app-navigate-button class="navigate-button"></app-navigate-button>  
+        <app-socialbutton-h class="socialbutton"></app-socialbutton-h>                                            
     <main>
         <router-outlet></router-outlet>
     </main>

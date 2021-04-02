@@ -54,7 +54,13 @@
   top: 0px;
   left: 0px;
 }
-
+.socialbutton {
+  z-index: 5000;
+  position: absolute;
+  top: var(--hauteur-slider);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 main {
   position: relative;
   width: 100%;

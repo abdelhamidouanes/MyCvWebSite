@@ -1,0 +1,130 @@
+.container {
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+.transition {
+  transition: background-color var(--time-transition) ease-in-out,
+    font-size 0.2s ease-in-out, color 0.5s ease-in-out;
+}
+.social-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.one-socialbtn-containerfb,
+.one-socialbtn-containeris,
+.one-socialbtn-containerin,
+.one-socialbtn-containergh {
+  background-color: var(--color-recruter-buttons);
+  color: white;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.one-socialbtn-containerfb:hover {
+  background-color: white;
+  font-size: 2.2rem;
+  color: #4267b2;
+}
+.one-socialbtn-containeris:hover {
+  background-color: white;
+  font-size: 2.2rem;
+  color: #c13584;
+}
+.one-socialbtn-containerin:hover {
+  background-color: white;
+  font-size: 2.2rem;
+  color: #0077b5;
+}
+.one-socialbtn-containergh:hover {
+  background-color: white;
+  font-size: 2.2rem;
+  color: #bd2c00;
+}
+
+@media all and (min-width: 800px) and (max-width: 1024px) {
+  .container {
+    width: 225px;
+  }
+  .one-socialbtn-containerfb,
+  .one-socialbtn-containeris,
+  .one-socialbtn-containerin,
+  .one-socialbtn-containergh {
+    border-radius: 45px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.7rem;
+  }
+  .one-socialbtn-containerfb:hover {
+    font-size: 2.1rem;
+  }
+  .one-socialbtn-containeris:hover {
+    font-size: 2.1rem;
+  }
+  .one-socialbtn-containerin:hover {
+    font-size: 2.1rem;
+  }
+  .one-socialbtn-containergh:hover {
+    font-size: 2.1rem;
+  }
+}
+@media all and (min-width: 601px) and (max-width: 800px) {
+  .container {
+    width: 200px;
+  }
+  .one-socialbtn-containerfb,
+  .one-socialbtn-containeris,
+  .one-socialbtn-containerin,
+  .one-socialbtn-containergh {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  .one-socialbtn-containerfb:hover {
+    font-size: 1.8rem;
+  }
+  .one-socialbtn-containeris:hover {
+    font-size: 1.8rem;
+  }
+  .one-socialbtn-containerin:hover {
+    font-size: 1.8rem;
+  }
+  .one-socialbtn-containergh:hover {
+    font-size: 1.8rem;
+  }
+}
+@media all and (max-width: 600px) {
+  .container {
+    width: 150px;
+  }
+  .one-socialbtn-containerfb,
+  .one-socialbtn-containeris,
+  .one-socialbtn-containerin,
+  .one-socialbtn-containergh {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+  .one-socialbtn-containerfb:hover {
+    font-size: 1.6rem;
+  }
+  .one-socialbtn-containeris:hover {
+    font-size: 1.6rem;
+  }
+  .one-socialbtn-containerin:hover {
+    font-size: 1.6rem;
+  }
+  .one-socialbtn-containergh:hover {
+    font-size: 1.6rem;
+  }
+}
