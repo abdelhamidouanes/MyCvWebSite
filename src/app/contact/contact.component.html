@@ -1,1 +1,45 @@
-<p>contact works!</p>
+<div class="contact" [ngStyle]="{'background-image': 'url(' + imgFolderBG + '/contactbg/1.png )'}">
+    <div class="contact-zone">
+        <div class="title"><h2>Contacter moi</h2></div>
+        <div class="contenu">
+            <div class="feel-free-zone">
+                <p>Je me tiens à votre disposition pour tout renseignement complémentaire.</p>
+                <form action="post">
+                    <div [ngClass]="{'one-input': true,
+                                     'input-focus': getInputSelected('1')}" >
+                        <label for="name"><i class="fas fa-user-tie"></i></label>
+                        <input (focus)="onFocus(1)" (blur)="onBlur(1)" type="text" name="name" id="name" placeholder="Nom et prénom">
+                    </div>
+                    <div [ngClass]="{'one-input': true,
+                                     'input-focus': getInputSelected('2')}" >
+                        <label for="sujet"><i class="fas fa-file-alt"></i></label>
+                        <input (focus)="onFocus(2)" (blur)="onBlur(2)" type="text" name="sujet" id="sujet" placeholder="Sujet">
+                    </div>
+                    <div [ngClass]="{'one-input': true,
+                                     'input-focus': getInputSelected('3')}" >
+                        <label for="email"><i class="fas fa-at"></i></label>
+                        <input (focus)="onFocus(3)" (blur)="onBlur(3)" type="email" name="email" id="email" placeholder="Votre adresse Email">
+                    </div>
+                    <div class="one-input-msg">
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Votre message"></textarea>
+                    </div>
+                    <input id="btn-envoie" type="submit" value="Envoyer">
+                </form>
+            </div>
+            <div class="contact-detail">
+                <div class="one-detail">
+                    <h5>Adresse</h5>
+                    <p>29 Rue Andalous, La medina 1008 Beb Mnara Tunis, Tunisie</p>
+                </div>
+                <div class="one-detail">
+                    <h5>Phone</h5>
+                    <p>+216 25 25 12 95</p>
+                </div>
+                <div class="one-detail">
+                    <h5>Email</h5>
+                    <p>abdelhamid.ouanes.mail@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
