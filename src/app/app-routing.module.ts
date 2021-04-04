@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeroComponent } from './hero/hero.component';
+import { NothingComponent } from './nothing/nothing.component';
 
 const routes: Routes = [
-  { path: 'home', component: HeroComponent},
+  { path: 'home', component: NothingComponent},
   { path: '', redirectTo : 'home', pathMatch : 'full'},
   { path: '**', redirectTo : 'home'}
 ];

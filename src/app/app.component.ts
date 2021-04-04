@@ -1,6 +1,6 @@
 import { AfficheMenuService } from './Services/afficheMenu.service';
 import { BgService } from './Services/bg.service';
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, HostListener, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  topScroll: number;
   afficheMenu: string;
   afficheMenuSubscription: Subscription;
 
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
     );
     this.bgService.emitPreviousClicked();
 
+    this.topScroll = 0;
   }
 
   ngOnDestroy(): void {
@@ -92,6 +94,12 @@ export class AppComponent implements OnInit, OnDestroy {
         }
         index++;
     }, 10);
+  }
+
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event): void {
+    this.topScroll = document.documentElement.scrollTop;
   }
 
 }

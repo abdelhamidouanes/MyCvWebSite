@@ -2,17 +2,18 @@
                  'container-var1': activeTheme === '1',
                  'container-var2': activeTheme === '2',
                  'container-var3': activeTheme === '3',
-                 'container-var4': activeTheme === '4'}">    
+                 'container-var4': activeTheme === '4'}" id="container">    
         <app-slider class="slider"></app-slider>
         <app-nav-h></app-nav-h>
         <app-nav2-h [ngClass]="{'nav2': true,
                                 'nav2Display': afficheMenu === 'true',
-                                'nav2Hidden': afficheMenu === 'false'}" ></app-nav2-h>                                            
+                                'nav2Hidden': afficheMenu === 'false'}" 
+                    [ngStyle]="{'top': 'calc(var(--theme-nav-height) + ' +topScroll + 'px)' }"></app-nav2-h>                                            
     <main>
-        <router-outlet>
-            <app-navigate-button class="navigate-button"></app-navigate-button>
-            <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
-        </router-outlet>
+        <app-hero></app-hero>
+        <app-navigate-button class="navigate-button"></app-navigate-button>
+        <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
+        <router-outlet></router-outlet>
     </main>
     <app-information class="information"></app-information>
     <app-contact></app-contact>

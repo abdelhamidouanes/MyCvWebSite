@@ -28,3 +28,6 @@ ul li {
   border-radius: 4px;
   cursor: pointer;
 }
+.transition {
+  transition: all var(--time-transition) ease-in-out;
+}

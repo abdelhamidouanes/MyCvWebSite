@@ -30,6 +30,7 @@ import { NavigateButtonComponent } from './navigate-button/navigate-button.compo
 import { SliderComponent } from './slider/slider.component';
 import { ProfilePicService } from './Services/profilePic.service';
 import { ThemePreferencesService } from './Services/themePreferences.service';
+import { NothingComponent } from './nothing/nothing.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ThemePreferencesService } from './Services/themePreferences.service';
     FooterComponent,
     Nav2HComponent,
     NavigateButtonComponent,
-    SliderComponent
+    SliderComponent,
+    NothingComponent
   ],
   imports: [
     BrowserModule,
