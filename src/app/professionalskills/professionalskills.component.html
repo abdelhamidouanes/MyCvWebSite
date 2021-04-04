@@ -1,1 +1,19 @@
-<p>professionalskills works!</p>
+<h2 id="title-experience-pro">Experiences professionnelles</h2>
+<div class="experience-pro-container">
+    <div class="experience-pro">
+        <div class="one-experience transition" *ngFor="let oneExperiencePro of experiencePro">
+            <div class="left-experience transition">
+                <h5>{{oneExperiencePro.emploiyeur}}</h5>
+                    <p class="periode">{{oneExperiencePro.dateDebutM}} {{oneExperiencePro.dateDebutY}} - {{oneExperiencePro.dateFinM}} {{oneExperiencePro.dateFinY}}</p>
+            </div>
+            <div class="right-experience">
+                <h2>{{oneExperiencePro.jobTitle}}</h2>
+                <div class="work-detail">
+                    <ul>
+                        <li *ngFor="let oneJobDetail of oneExperiencePro.jobDetail">{{oneJobDetail}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,6 +31,7 @@ import { SliderComponent } from './slider/slider.component';
 import { ProfilePicService } from './Services/profilePic.service';
 import { ThemePreferencesService } from './Services/themePreferences.service';
 import { NothingComponent } from './nothing/nothing.component';
+import { ProfessionalSkillsService } from './Services/professionalSkills.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { NothingComponent } from './nothing/nothing.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [BgService, AfficheMenuService, ProfilePicService, ThemePreferencesService],
+  providers: [BgService, AfficheMenuService, ProfilePicService, ThemePreferencesService, ProfessionalSkillsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
