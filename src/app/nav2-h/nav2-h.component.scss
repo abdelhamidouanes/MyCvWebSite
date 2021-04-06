@@ -28,6 +28,10 @@ ul li {
   border-radius: 4px;
   cursor: pointer;
 }
+ul li a {
+  color: white;
+  text-decoration: none;
+}
 .transition {
   transition: all var(--time-transition) ease-in-out;
 }

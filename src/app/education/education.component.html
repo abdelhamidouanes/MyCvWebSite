@@ -1,1 +1,25 @@
-<p>education works!</p>
+<h2 id="title-formation">Formation</h2>
+<div class="formation-container">
+    <div class="formation">
+        <div class="one-formation transition" *ngFor="let formation of formations">
+            <div class="left-formation transition">
+                <h5>{{formation.diplome}}</h5>
+                <p class="periode" *ngIf="formation.dateDebutM==0">
+                    <i *ngIf="formation.dateDebutY==formation.dateFinY">{{formation.dateDebutY}}</i>
+                    <i *ngIf="formation.dateDebutY!=formation.dateFinY">{{formation.dateDebutY}} - {{formation.dateFinY}}</i>
+                </p>
+                <p class="periode" *ngIf="formation.dateDebutM!=0">
+                    <i *ngIf="formation.dateDebutM==formation.dateFinM">{{getMonthStatic(formation.dateDebutM, '3')}} {{formation.dateDebutY}}</i>
+                    <i *ngIf="formation.dateDebutM!=formation.dateFinM">{{getMonthStatic(formation.dateDebutM, '3')}} {{formation.dateDebutY}} - {{getMonthStatic(formation.dateFinM, '3')}} {{formation.dateFinY}}</i>
+                </p>
+            </div>
+            <div class="right-formation">
+                <h2>{{formation.specialite}}</h2>
+                <h3>{{formation.ecoleType}} : {{formation.ecole}}</h3>
+                <p class="formation-detail">
+                    {{formation.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

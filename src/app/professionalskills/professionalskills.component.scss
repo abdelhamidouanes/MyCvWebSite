@@ -3,22 +3,18 @@
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
 }
 .experience-pro-container {
-  height: 1080px;
-  min-height: 1080px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .experience-pro {
-  width: 80%;
-  height: 100%;
-  min-height: 100%;
+  width: var(--theme-contenu-width);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,9 +22,9 @@
 }
 .one-experience {
   width: 100%;
+  margin: 20px 0px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  height: 200px;
   align-items: center;
   justify-items: center;
   box-shadow: 12px 9px 29px -3px var(--theme-box-shadow);
@@ -46,6 +42,10 @@
   align-items: center;
 }
 .one-experience .left-experience h5,
+.one-experience .left-experience p {
+  text-align: center;
+}
+.one-experience .left-experience h5,
 .one-experience .left-experience p,
 .one-experience .right-experience p,
 .one-experience .right-experience h2 {
@@ -58,7 +58,7 @@
   justify-content: space-evenly;
   align-items: flex-start;
   width: 90%;
-  min-width: 90%;
+  padding: 20px;
 }
 .one-experience li {
   font-weight: lighter;
@@ -74,6 +74,30 @@
 @media all and (min-width: 800px) and (max-width: 1024px) {
 }
 @media all and (min-width: 601px) and (max-width: 800px) {
+  h5 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .one-experience li {
+    font-size: 1.4rem;
+  }
 }
 @media all and (max-width: 600px) {
+  h5 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .one-experience li {
+    font-size: 1.2rem;
+  }
 }

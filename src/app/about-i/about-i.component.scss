@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 30px 30px;
+  padding: 30px;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -22,9 +22,18 @@ p {
   p {
     font-size: 1.4rem;
   }
+  .container {
+    padding: 10px 20px;
+  }
 }
 @media all and (max-width: 600px) {
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 5px 20px;
   }
 }

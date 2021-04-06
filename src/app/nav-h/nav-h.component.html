@@ -1,12 +1,12 @@
 <div class="container transition">
     <nav>
         <ul>
-                <li><div class="elementcontainer">Mon LinkedIn</div></li>
-                <li class="menuElement"><div class="elementcontainer">A propos</div></li>
-                <li class="menuElement"><div class="elementcontainer">Compétences</div></li>
-                <li class="menuElement"><div class="elementcontainer">Expérience</div></li>
-                <li class="menuElement"><div class="elementcontainer">Formation</div></li>
-                <li class="menuElement"><div class="elementcontainer">Contact</div></li>
+                <li><div routerLinkActive="active" class="elementcontainer"><a routerLink="home">Mon CV</a></div></li>
+                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="info">A propos</a></div></li>
+                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="competence">Compétences</a></div></li>
+                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="experience">Expérience</a></div></li>
+                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="formation">Formation</a></div></li>
+                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="contact">Contact</a></div></li>
                 <li [ngClass]="{'menuBarsHidden': afficheMenu === 'true',
                                 'menuBarsDisplay': afficheMenu === 'false'}" (click)="afficheCacherMenu()"><div class="elementcontainer"><i class="fas fa-bars"></i></div></li>
                 <li [ngClass]="{'menuXHidden': afficheMenu === 'false',

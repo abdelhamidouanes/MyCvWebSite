@@ -1,0 +1,18 @@
+<h2 id="title-competence" *ngIf="getLengthStatic(competences)>0">Compétences professionnelles</h2>
+<div class="competence-container" *ngIf="getLengthStatic(competences)>0">
+        <div class="competence transition">
+            <div class="one-competence transition" *ngFor="let competence of competences; let i=index">
+                <div class="first-line">
+                    <h4>{{competence.titre}}</h4>
+                    <p class="pourcentage">{{competence.pourcentage}} %</p>
+                </div>
+                <div class="second-line">
+                    <p>{{competence.description}}</p>
+                </div>
+                <div class="third-line">
+                    <div class="colored-div transition" [ngStyle]="{'width': competence.pourcentage+'%'}"></div>
+                    <div class="backgroud-div transition"></div>
+                </div>
+            </div>
+        </div>
+</div> 

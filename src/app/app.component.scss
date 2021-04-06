@@ -11,18 +11,20 @@
 .container-var1 {
   --theme-nav-color: rgb(202, 184, 160, 0.6);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor: rgba(131, 97, 57, 0.116);
+  --theme-nav-li-bgcolor-active: rgba(131, 97, 57, 0.349);
+  --theme-nav-li-bgcolor: rgba(131, 97, 57, 0.151);
   --theme-navigate-button-color: rgba(82, 57, 29, 0.301);
   --theme-navigate-button-bg: rgba(190, 167, 143, 0.534);
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
-  --color-recruter-buttons: rgb(179, 152, 117);
+  --color-recruter-buttons: rgb(143, 118, 86);
   --theme-box-shadow: rgba(202, 184, 160, 0.705);
 }
 .container-var2 {
   --theme-nav-color: rgba(132, 214, 152, 0.6);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor: rgba(30, 153, 61, 0.233);
+  --theme-nav-li-bgcolor-active: rgba(30, 153, 61, 0.432);
+  --theme-nav-li-bgcolor: rgba(30, 153, 61, 0.2);
   --theme-navigate-button-color: rgba(38, 110, 56, 0.6);
   --theme-navigate-button-bg: rgba(83, 114, 92, 0.233);
   --font-style-title-description: "Source Code Pro", monospace;
@@ -31,9 +33,10 @@
   --theme-box-shadow: rgba(47, 197, 85, 0.377);
 }
 .container-var3 {
-  --theme-nav-color: rgba(38, 67, 80, 0.6);
+  --theme-nav-color: rgba(59, 90, 104, 0.582);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor: rgba(12, 48, 65, 0.486);
+  --theme-nav-li-bgcolor-active: rgba(19, 43, 54, 0.678);
+  --theme-nav-li-bgcolor: rgba(8, 42, 58, 0.295);
   --theme-navigate-button-color: rgba(17, 51, 65, 0.822);
   --theme-navigate-button-bg: rgba(131, 163, 179, 0.664);
   --font-style-title-description: "Source Code Pro", monospace;
@@ -42,9 +45,10 @@
   --theme-box-shadow: rgba(99, 164, 190, 0.432);
 }
 .container-var4 {
-  --theme-nav-color: rgba(120, 0, 0, 0.6);
+  --theme-nav-color: rgba(120, 0, 0, 0.637);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor: rgba(56, 4, 4, 0.76);
+  --theme-nav-li-bgcolor-active: rgba(44, 2, 2, 0.788);
+  --theme-nav-li-bgcolor: rgba(43, 3, 3, 0.438);
   --theme-navigate-button-color: rgba(63, 8, 8, 0.904);
   --theme-navigate-button-bg: rgba(122, 71, 71, 0.904);
   --font-style-title-description: "Source Code Pro", monospace;
@@ -74,7 +78,7 @@ main {
 .nav2 {
   position: absolute;
   right: 0px;
-  z-index: 5;
+  z-index: 10000;
   width: 100%;
 }
 .nav2Display {
@@ -94,11 +98,8 @@ main {
   align-items: center;
   z-index: 5000;
 }
-.information {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero {
+  position: relative;
 }
 @media all and (max-width: 600px) {
   .nav2Display {

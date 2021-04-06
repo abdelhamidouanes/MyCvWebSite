@@ -13,15 +13,9 @@ import { AboutIComponent } from './about-i/about-i.component';
 import { BasicIComponent } from './basic-i/basic-i.component';
 import { SocialbuttonHComponent } from './socialbutton-h/socialbutton-h.component';
 import { ProfessionalskillsComponent } from './professionalskills/professionalskills.component';
-import { OneelementPSComponent } from './oneelement-ps/oneelement-ps.component';
-import { WorkexperienceComponent } from './workexperience/workexperience.component';
-import { OneelementWEComponent } from './oneelement-we/oneelement-we.component';
 import { EducationComponent } from './education/education.component';
-import { OneelementEComponent } from './oneelement-e/oneelement-e.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeelfreeCComponent } from './feelfree-c/feelfree-c.component';
-import { DetailCComponent } from './detail-c/detail-c.component';
-import { OneelementDCComponent } from './oneelement-d-c/oneelement-d-c.component';
 import { FooterComponent } from './footer/footer.component';
 import { BgService } from './Services/bg.service';
 import { Nav2HComponent } from './nav2-h/nav2-h.component';
@@ -30,8 +24,11 @@ import { NavigateButtonComponent } from './navigate-button/navigate-button.compo
 import { SliderComponent } from './slider/slider.component';
 import { ProfilePicService } from './Services/profilePic.service';
 import { ThemePreferencesService } from './Services/themePreferences.service';
-import { NothingComponent } from './nothing/nothing.component';
 import { ProfessionalSkillsService } from './Services/professionalSkills.service';
+import { CompetenceComponent } from './competence/competence.component';
+import { FormationService } from './Services/formation.service';
+import { CompetenceService } from './Services/competence.service';
+import { MonCVComponent } from './mon-cv/mon-cv.component';
 
 @NgModule({
   declarations: [
@@ -46,26 +43,27 @@ import { ProfessionalSkillsService } from './Services/professionalSkills.service
     BasicIComponent,
     SocialbuttonHComponent,
     ProfessionalskillsComponent,
-    OneelementPSComponent,
-    WorkexperienceComponent,
-    OneelementWEComponent,
     EducationComponent,
-    OneelementEComponent,
     ContactComponent,
     FeelfreeCComponent,
-    DetailCComponent,
-    OneelementDCComponent,
     FooterComponent,
     Nav2HComponent,
     NavigateButtonComponent,
     SliderComponent,
-    NothingComponent
+    CompetenceComponent,
+    MonCVComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [BgService, AfficheMenuService, ProfilePicService, ThemePreferencesService, ProfessionalSkillsService],
+  providers: [BgService,
+              AfficheMenuService,
+              ProfilePicService,
+              ThemePreferencesService,
+              ProfessionalSkillsService,
+              FormationService,
+              CompetenceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

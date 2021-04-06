@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 30px 30px;
+  padding: 30px;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -30,7 +30,7 @@ h5::after {
 }
 #adresse {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 80px 1fr;
   grid-template-rows: 1fr 1fr;
 }
 #adr-title {
@@ -66,12 +66,21 @@ h5::after {
   h5 {
     font-size: 1.5rem;
   }
+  .container {
+    padding: 10px 20px;
+  }
 }
 @media all and (max-width: 600px) {
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   h5 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 5px 20px;
   }
 }

@@ -27,12 +27,17 @@ nav ul {
   text-shadow: -3px 4px 16px rgba(0, 0, 0, 0.1);
   font-size: 2rem;
 }
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
 nav ul li:nth-child(1) {
   flex: 1;
 }
 nav ul li .elementcontainer {
   width: fit-content;
   padding: 5px 20px;
+  margin: 0px 3px;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.2s linear;
@@ -40,7 +45,12 @@ nav ul li .elementcontainer {
 nav ul li .elementcontainer:hover {
   background-color: var(--theme-nav-li-bgcolor);
 }
-
+.active {
+  background-color: var(--theme-nav-li-bgcolor-active);
+}
+nav ul li .active:hover {
+  background-color: var(--theme-nav-li-bgcolor-active);
+}
 .menuBarsHidden {
   display: none;
 }

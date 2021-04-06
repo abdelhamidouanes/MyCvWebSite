@@ -4,7 +4,7 @@
         <div class="one-experience transition" *ngFor="let oneExperiencePro of experiencePro">
             <div class="left-experience transition">
                 <h5>{{oneExperiencePro.emploiyeur}}</h5>
-                    <p class="periode">{{oneExperiencePro.dateDebutM}} {{oneExperiencePro.dateDebutY}} - {{oneExperiencePro.dateFinM}} {{oneExperiencePro.dateFinY}}</p>
+                    <p class="periode">{{getMonthStatic(oneExperiencePro.dateDebutM, '3')}} {{oneExperiencePro.dateDebutY}} - {{getMonthStatic(oneExperiencePro.dateFinM, '3')}} {{oneExperiencePro.dateFinY}}</p>
             </div>
             <div class="right-experience">
                 <h2>{{oneExperiencePro.jobTitle}}</h2>

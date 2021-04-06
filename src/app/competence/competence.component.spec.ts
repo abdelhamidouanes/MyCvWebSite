@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OneelementPSComponent } from './oneelement-ps.component';
+import { CompetenceComponent } from './competence.component';
 
-describe('OneelementPSComponent', () => {
-  let component: OneelementPSComponent;
-  let fixture: ComponentFixture<OneelementPSComponent>;
+describe('CompetenceComponent', () => {
+  let component: CompetenceComponent;
+  let fixture: ComponentFixture<CompetenceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OneelementPSComponent ]
+      declarations: [ CompetenceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OneelementPSComponent);
+    fixture = TestBed.createComponent(CompetenceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

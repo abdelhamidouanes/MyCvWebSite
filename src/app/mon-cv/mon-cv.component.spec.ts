@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OneelementEComponent } from './oneelement-e.component';
+import { MonCVComponent } from './mon-cv.component';
 
-describe('OneelementEComponent', () => {
-  let component: OneelementEComponent;
-  let fixture: ComponentFixture<OneelementEComponent>;
+describe('MonCVComponent', () => {
+  let component: MonCVComponent;
+  let fixture: ComponentFixture<MonCVComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OneelementEComponent ]
+      declarations: [ MonCVComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OneelementEComponent);
+    fixture = TestBed.createComponent(MonCVComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

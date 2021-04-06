@@ -1,0 +1,91 @@
+#title-competence {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 40px;
+}
+.competence-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.competence {
+  width: var(--theme-contenu-width);
+  padding: 20px 0px;
+  margin: 20px 0px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  box-shadow: 12px 9px 29px -3px var(--theme-box-shadow);
+  -webkit-box-shadow: 12px 9px 29px -3px var(--theme-box-shadow);
+  -moz-box-shadow: 12px 9px 29px -3px var(--theme-box-shadow);
+}
+.competence .one-competence {
+  padding: 10px 30px;
+  color: var(--color-recruter-buttons);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+}
+.competence .one-competence .first-line {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.competence .one-competence .second-line {
+  grid-row: 2/3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.competence .one-competence .third-line {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.competence .one-competence .third-line .colored-div {
+  position: absolute;
+  height: 5px;
+  background-color: var(--theme-navigate-button-color);
+}
+.competence .one-competence .third-line .backgroud-div {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  opacity: 0.5;
+  background-color: var(--theme-navigate-button-bg);
+}
+.transition {
+  transition: all var(--time-transition) ease-in-out;
+}
+@media all and (min-width: 800px) and (max-width: 1024px) {
+}
+@media all and (min-width: 601px) and (max-width: 800px) {
+  .competence .one-competence {
+    padding: 20px 30px;
+    height: 100px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+@media all and (max-width: 600px) {
+  .competence {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  .competence .one-competence {
+    padding: 20px 10px;
+    height: 100px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}

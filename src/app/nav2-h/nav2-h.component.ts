@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AfficheMenuService } from '../Services/afficheMenu.service';
 
 @Component({
   selector: 'app-nav2-h',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Nav2HComponent implements OnInit {
 
-  constructor() { }
+  afficheMenu: string;
+  afficheMenuSubscription: Subscription;
+
+  constructor(private afficheMenuService: AfficheMenuService) { }
 
   ngOnInit(): void {
+    this.afficheMenuSubscription = this.afficheMenuService.afficheMenuSubject.subscribe(
+      afficheMenu => this.afficheMenu = afficheMenu
+    );
+    this.afficheMenuService.emitAfficheMenu();
   }
 
+  afficheCacherMenu(): void {
+    if (this.afficheMenu === 'true') {
+      this.afficheMenuService.changeAfficheMenu('false');
+    } else {
+      this.afficheMenuService.changeAfficheMenu('true');
+    }
+  }
 }

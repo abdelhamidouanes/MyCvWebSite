@@ -10,14 +10,14 @@
                                 'nav2Hidden': afficheMenu === 'false'}" 
                     [ngStyle]="{'top': 'calc(var(--theme-nav-height) + ' +topScroll + 'px)' }"></app-nav2-h>                                            
     <main>
-        <app-hero></app-hero>
-        <app-navigate-button class="navigate-button"></app-navigate-button>
-        <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
+        <div class="hero">    
+            <app-hero></app-hero>
+            <app-navigate-button class="navigate-button"></app-navigate-button>
+            <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
+        </div>
         <router-outlet></router-outlet>
     </main>
-    <app-information class="information"></app-information>
-    <app-professionalskills></app-professionalskills>
-    <app-contact></app-contact>
+    <app-contact *ngIf="router.url!='/contact'"></app-contact>
     <app-footer></app-footer>
 </div>
  

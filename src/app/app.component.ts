@@ -2,6 +2,7 @@ import { AfficheMenuService } from './Services/afficheMenu.service';
 import { BgService } from './Services/bg.service';
 import { Component, HostListener, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -55,7 +56,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.activeThemeSubscription.unsubscribe();
   }
 
-  constructor(private bgService: BgService, private afficheMenuService: AfficheMenuService) {
+  constructor(private bgService: BgService,
+              private afficheMenuService: AfficheMenuService,
+              public router: Router) {
     this.changeTheme();
   }
 
