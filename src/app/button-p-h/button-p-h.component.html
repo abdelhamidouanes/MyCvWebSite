@@ -1,4 +1,5 @@
 <div class="container">
     <button class="transition">Me recruter</button>
-    <button class="transition">Télécharger mon cv</button>
+    <a [href]="cvFolder + 'CV-Abdelhamid-Ouanes-1.pdf'" [download]="'CV-'+profile[0].prenom+'-'+profile[0].nom+'.pdf'">
+    <button class="transition">Télécharger mon cv</button></a>
 </div> 

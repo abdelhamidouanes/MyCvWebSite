@@ -1,12 +1,12 @@
 <div class="container transition">
     <nav>
         <ul>
-                <li><div routerLinkActive="active" class="elementcontainer"><a routerLink="home">Mon CV</a></div></li>
-                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="info">A propos</a></div></li>
-                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="competence">Compétences</a></div></li>
-                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="experience">Expérience</a></div></li>
-                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="formation">Formation</a></div></li>
-                <li class="menuElement"><div routerLinkActive="active" class="elementcontainer"><a routerLink="contact">Contact</a></div></li>
+                <li><div (click)="scrollTo.emit('container')" (click)="cacherMenu()" routerLinkActive="active" class="elementcontainer"><a routerLink="home">Mon CV</a></div></li>
+                <li class="menuElement"><div (click)="scrollTo.emit('routerOutlet')" routerLinkActive="active" class="elementcontainer"><a routerLink="info">A propos</a></div></li>
+                <li class="menuElement"><div (click)="scrollTo.emit('routerOutlet')" routerLinkActive="active" class="elementcontainer"><a routerLink="competence">Compétences</a></div></li>
+                <li class="menuElement"><div (click)="scrollTo.emit('routerOutlet')" routerLinkActive="active" class="elementcontainer"><a routerLink="experience">Expérience</a></div></li>
+                <li class="menuElement"><div (click)="scrollTo.emit('routerOutlet')" routerLinkActive="active" class="elementcontainer"><a routerLink="formation">Formation</a></div></li>
+                <li class="menuElement"><div (click)="scrollTo.emit('routerOutlet')" routerLinkActive="active" class="elementcontainer"><a routerLink="contact">Contact</a></div></li>
                 <li [ngClass]="{'menuBarsHidden': afficheMenu === 'true',
                                 'menuBarsDisplay': afficheMenu === 'false'}" (click)="afficheCacherMenu()"><div class="elementcontainer"><i class="fas fa-bars"></i></div></li>
                 <li [ngClass]="{'menuXHidden': afficheMenu === 'false',

@@ -8,6 +8,6 @@
                     'imgDisplay': afficheMenu === 'false'}"
     [src]="imgFolderProfilePic + profilePicture.profileImg" alt="Abdelhamid Ouanes">
     <div class="profilepicremplace"></div>
-    <h1>Abdelhamid Ouanes</h1>
-    <h2>Développeur full stack, Consultant informatique, Développeur logiciel</h2>
-</div> 
+    <h1>{{profile[0].prenom}} {{profile[0].nom}}</h1>
+    <h2>{{profile[0].jobTitle}}</h2>
+</div>

@@ -6,19 +6,24 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.social-btn-footer {
+.social-btn-footer-container {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 150px;
   display: flex;
   justify-content: space-between;
+}
+.social-btn-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  color: #888;
-  font-size: 2.5rem;
 }
 .social-btn-footer i {
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #888;
+  font-size: 2.5rem;
 }
 .social-btn-footer .fa-facebook:hover {
   color: var(--fb-color);
@@ -40,4 +45,18 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+}
+a {
+  text-decoration: none;
+}
+@media all and (max-width: 600px) {
+  .social-btn-footer i {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #888;
+    font-size: 2.2rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
 }

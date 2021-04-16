@@ -2,23 +2,23 @@
     <h2>Information basique</h2>
     <div class="element-right-grid">
         <h5>Age</h5>
-        <p>30 ans</p>
+        <p>{{getAgeStatic(profile[0].dateNaissace)}} ans</p>
     </div>
     <div class="element-right-grid mail">
         <h5>Email</h5>
-        <p>abdelhamid.ouanes.mail<i> . </i>@gmail.com</p>
+        <p>{{getIdentifiantEmailStatic(profile[0].email)}}<i> . </i>{{getDomaineEmailStatic(profile[0].email)}}</p>
     </div>
     <div class="element-right-grid">
         <h5>Phone</h5>
-        <p>+216 25 25 12 95</p>
+        <p>{{profile[0].tel}}</p>
     </div>
     <div id="adresse">
         <h5 id="adr-title">Adresse</h5>
-        <p id="adr-detail">29 Rue Andalous, La medina 1008 Beb Mnara</p>
-        <p id="adr-pays"> Tunis, Tunisie</p>
+        <p id="adr-detail">{{profile[0].adr}}</p>
+        <p id="adr-pays"> {{profile[0].adrVille}}, {{profile[0].adrPays}}</p>
     </div>
     <div class="element-right-grid">
         <h5>Langue</h5>
-        <p>Arabe, Français, Anglais.</p>
+        <p> <i *ngFor="let langue of profile[0].langues; let i=index">{{langue.langue}}<i *ngIf="i+1 != profile[0].langues.length">, </i></i></p>
     </div>
 </div> 

@@ -4,18 +4,19 @@
                  'container-var3': activeTheme === '3',
                  'container-var4': activeTheme === '4'}" id="container">    
         <app-slider class="slider"></app-slider>
-        <app-nav-h></app-nav-h>
+        <app-nav-h class="nav" (scrollTo)="scrollToSelectedElement($event)"></app-nav-h>
         <app-nav2-h [ngClass]="{'nav2': true,
                                 'nav2Display': afficheMenu === 'true',
                                 'nav2Hidden': afficheMenu === 'false'}" 
-                    [ngStyle]="{'top': 'calc(var(--theme-nav-height) + ' +topScroll + 'px)' }"></app-nav2-h>                                            
+                    [ngStyle]="{'top': 'calc(var(--theme-nav-height) + ' +topScroll + 'px)' }"
+                    (scrollTo)="scrollToSelectedElement($event)"></app-nav2-h>                                            
     <main>
         <div class="hero">    
             <app-hero></app-hero>
             <app-navigate-button class="navigate-button"></app-navigate-button>
             <app-socialbutton-h class="socialbutton"></app-socialbutton-h>
         </div>
-        <router-outlet></router-outlet>
+        <router-outlet id="routerOutlet"></router-outlet>
     </main>
     <app-contact *ngIf="router.url!='/contact'"></app-contact>
     <app-footer></app-footer>

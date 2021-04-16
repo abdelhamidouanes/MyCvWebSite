@@ -1,8 +1,9 @@
 import { AfficheMenuService } from './Services/afficheMenu.service';
 import { BgService } from './Services/bg.service';
-import { Component, HostListener, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -58,7 +59,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private bgService: BgService,
               private afficheMenuService: AfficheMenuService,
-              public router: Router) {
+              public router: Router,
+              private renderer: Renderer2) {
     this.changeTheme();
   }
 
@@ -99,10 +101,16 @@ export class AppComponent implements OnInit, OnDestroy {
     }, 10);
   }
 
-
+  // Pour la position du deuxième menu
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event): void {
     this.topScroll = document.documentElement.scrollTop;
+  }
+
+  // Pour récuprer l'event des composants NAV et scroll to main ou router outlet
+  scrollToSelectedElement(selectedElement: string): void{
+    const element = document.getElementById(selectedElement);
+    window.scrollTo(0, element.offsetTop - 100);
   }
 
 }

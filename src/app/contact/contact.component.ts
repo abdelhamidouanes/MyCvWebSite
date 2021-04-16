@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Profile } from '../Models/Profile.model';
 import { imgFolderBG } from '../Services/constantes';
+import { ProfileService } from '../Services/Profile.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +14,9 @@ export class ContactComponent implements OnInit {
   imgFolderBG: string;
   inputSelected: boolean[] = new Array(3);
 
-  constructor() { 
+  profile: Profile[];
+  profileSubscription: Subscription;
+  constructor(private profileService: ProfileService) {
     for (let index = 0; index < 3; index++) {
       this.inputSelected[index] = false;
     }
@@ -19,6 +24,11 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.imgFolderBG = imgFolderBG;
+
+    this.profileSubscription = this.profileService.profileSubject.subscribe(
+      profile => this.profile = profile
+    );
+    this.profileService.emitProfile();
   }
 
   onFocus(i: number): void{

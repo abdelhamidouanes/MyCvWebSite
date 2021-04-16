@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="social-btn">
-        <div class="one-socialbtn-containerfb transition"><i class="fab fa-facebook-f"></i></div>
-        <div class="one-socialbtn-containeris transition"><i class="fab fa-instagram"></i></div>
-        <div class="one-socialbtn-containerin transition"><i class="fab fa-linkedin-in"></i></div>
-        <div class="one-socialbtn-containergh transition"><i class="fab fa-github"></i></div>
+    <div class="social-btn" *ngFor="let social of profile[0].socialMedia">
+        <a *ngIf="social.socialMedia == 'fb'" [href]="social.link" target="_blank"><div *ngIf="social.socialMedia == 'fb'" class="one-socialbtn-containerfb transition"><i *ngIf="social.socialMedia == 'fb'" class="fab fa-facebook-f"></i></div></a>
+        <a *ngIf="social.socialMedia == 'insta'" [href]="social.link" target="_blank"><div *ngIf="social.socialMedia == 'insta'" class="one-socialbtn-containeris transition"><i class="fab fa-instagram"></i></div></a>
+        <a *ngIf="social.socialMedia == 'linkin'" [href]="social.link" target="_blank"><div *ngIf="social.socialMedia == 'linkin'" class="one-socialbtn-containerin transition"><i class="fab fa-linkedin-in"></i></div></a>
+        <a *ngIf="social.socialMedia == 'github'" [href]="social.link" target="_blank"><div *ngIf="social.socialMedia == 'github'" class="one-socialbtn-containergh transition"><i class="fab fa-github"></i></div></a>
     </div>
 </div>

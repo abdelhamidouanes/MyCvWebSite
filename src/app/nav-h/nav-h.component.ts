@@ -12,6 +12,8 @@ export class NavHComponent implements OnInit, OnDestroy {
   afficheMenu: string;
   afficheMenuSubscription: Subscription;
 
+  @Output() scrollTo = new EventEmitter();
+
   constructor(private afficheMenuService: AfficheMenuService) { }
 
   ngOnInit(): void {
@@ -30,6 +32,12 @@ export class NavHComponent implements OnInit, OnDestroy {
       this.afficheMenuService.changeAfficheMenu('false');
     } else {
       this.afficheMenuService.changeAfficheMenu('true');
+    }
+  }
+
+  cacherMenu(): void{
+    if (this.afficheMenu === 'true') {
+      this.afficheCacherMenu();
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AfficheMenuService } from '../Services/afficheMenu.service';
 
@@ -11,6 +11,8 @@ export class Nav2HComponent implements OnInit {
 
   afficheMenu: string;
   afficheMenuSubscription: Subscription;
+
+  @Output() scrollTo = new EventEmitter();
 
   constructor(private afficheMenuService: AfficheMenuService) { }
 

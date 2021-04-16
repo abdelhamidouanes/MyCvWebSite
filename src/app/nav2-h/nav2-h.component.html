@@ -1,11 +1,11 @@
 <div class="container transition">
     <nav>
         <ul>
-            <li class="transition"><a (click)="afficheCacherMenu()" routerLink="info">A propos</a></li>
-            <li class="transition"><a (click)="afficheCacherMenu()" routerLink="competence">Compétences</a></li>
-            <li class="transition"><a (click)="afficheCacherMenu()" routerLink="experience">Expérience</a></li>
-            <li class="transition"><a (click)="afficheCacherMenu()" routerLink="formation">Formation</a></li>
-            <li class="transition"><a (click)="afficheCacherMenu()" routerLink="contact">Contact</a></li>
+            <li class="transition"><a (click)="afficheCacherMenu()" (click)="scrollTo.emit('routerOutlet')" routerLink="info">A propos</a></li>
+            <li class="transition"><a (click)="afficheCacherMenu()" (click)="scrollTo.emit('routerOutlet')" routerLink="competence">Compétences</a></li>
+            <li class="transition"><a (click)="afficheCacherMenu()" (click)="scrollTo.emit('routerOutlet')" routerLink="experience">Expérience</a></li>
+            <li class="transition"><a (click)="afficheCacherMenu()" (click)="scrollTo.emit('routerOutlet')" routerLink="formation">Formation</a></li>
+            <li class="transition"><a (click)="afficheCacherMenu()" (click)="scrollTo.emit('routerOutlet')" routerLink="contact">Contact</a></li>
         </ul>
     </nav>
 </div>

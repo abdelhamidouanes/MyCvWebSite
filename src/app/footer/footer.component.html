@@ -1,12 +1,14 @@
 <footer>
-    <div class="social-btn-footer">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-github"></i>
+    <div class="social-btn-footer-container">
+        <div class="social-btn-footer" *ngFor="let social of profile[0].socialMedia">
+            <a *ngIf="social.socialMedia == 'fb'" [href]="social.link" target="_blank"><i *ngIf="social.socialMedia == 'fb'" class="fab fa-facebook"></i></a>
+            <a *ngIf="social.socialMedia == 'insta'" [href]="social.link" target="_blank"><i *ngIf="social.socialMedia == 'insta'" class="fab fa-instagram"></i></a>
+            <a *ngIf="social.socialMedia == 'linkin'" [href]="social.link" target="_blank"><i *ngIf="social.socialMedia == 'linkin'" class="fab fa-linkedin-in"></i></a>
+            <a *ngIf="social.socialMedia == 'github'" [href]="social.link" target="_blank"><i *ngIf="social.socialMedia == 'github'" class="fab fa-github"></i></a>
+        </div>
     </div>
     <div class="credit">
-        <h1>Abdelhamid Ouanes</h1>
+        <h1>{{profile[0].prenom}} {{profile[0].nom}}</h1>
         <p>Tous droits réservés. &copy; 2021.</p>
     </div>
-</footer> 
+</footer>

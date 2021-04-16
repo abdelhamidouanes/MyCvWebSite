@@ -9,16 +9,16 @@
   --github-color: #bd2c00;
 }
 .container-var1 {
-  --theme-nav-color: rgb(202, 184, 160, 0.6);
+  --theme-nav-color: rgb(236, 176, 1, 0.6);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor-active: rgba(131, 97, 57, 0.349);
-  --theme-nav-li-bgcolor: rgba(131, 97, 57, 0.151);
-  --theme-navigate-button-color: rgba(82, 57, 29, 0.301);
-  --theme-navigate-button-bg: rgba(190, 167, 143, 0.534);
+  --theme-nav-li-bgcolor-active: rgba(250, 160, 35, 0.747);
+  --theme-nav-li-bgcolor: rgba(216, 175, 51, 0.377);
+  --theme-navigate-button-color: rgba(248, 195, 4, 0.815);
+  --theme-navigate-button-bg: rgba(238, 195, 65, 0.425);
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
-  --color-recruter-buttons: rgb(143, 118, 86);
-  --theme-box-shadow: rgba(202, 184, 160, 0.705);
+  --color-recruter-buttons: rgb(241, 159, 44);
+  --theme-box-shadow: rgba(245, 143, 0, 0.281);
 }
 .container-var2 {
   --theme-nav-color: rgba(132, 214, 152, 0.6);
@@ -45,16 +45,16 @@
   --theme-box-shadow: rgba(99, 164, 190, 0.432);
 }
 .container-var4 {
-  --theme-nav-color: rgba(120, 0, 0, 0.637);
+  --theme-nav-color: rgba(174, 77, 85, 0.6);
   --theme-nav-height: 60px;
-  --theme-nav-li-bgcolor-active: rgba(44, 2, 2, 0.788);
-  --theme-nav-li-bgcolor: rgba(43, 3, 3, 0.438);
-  --theme-navigate-button-color: rgba(63, 8, 8, 0.904);
-  --theme-navigate-button-bg: rgba(122, 71, 71, 0.904);
+  --theme-nav-li-bgcolor-active: rgba(187, 47, 58, 0.699);
+  --theme-nav-li-bgcolor: rgba(177, 54, 64, 0.349);
+  --theme-navigate-button-color: rgba(230, 57, 71, 0.815);
+  --theme-navigate-button-bg: rgba(87, 32, 36, 0.342);
   --font-style-title-description: "Source Code Pro", monospace;
   --font-family-recruter-buttons: "Montserrat", sans-serif;
-  --color-recruter-buttons: rgb(71, 20, 20);
-  --theme-box-shadow: rgba(243, 56, 56, 0.212);
+  --color-recruter-buttons: rgba(174, 77, 85);
+  --theme-box-shadow: rgba(243, 41, 58, 0.26);
 }
 .slider {
   width: 100%;
@@ -64,7 +64,6 @@
   left: 0px;
 }
 .socialbutton {
-  z-index: 5000;
   position: absolute;
   bottom: 0%;
   left: 50%;
@@ -78,7 +77,6 @@ main {
 .nav2 {
   position: absolute;
   right: 0px;
-  z-index: 10000;
   width: 100%;
 }
 .nav2Display {
@@ -96,7 +94,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5000;
 }
 .hero {
   position: relative;

@@ -29,6 +29,7 @@ import { CompetenceComponent } from './competence/competence.component';
 import { FormationService } from './Services/formation.service';
 import { CompetenceService } from './Services/competence.service';
 import { MonCVComponent } from './mon-cv/mon-cv.component';
+import { ProfileService } from './Services/Profile.service';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MonCVComponent } from './mon-cv/mon-cv.component';
               ThemePreferencesService,
               ProfessionalSkillsService,
               FormationService,
-              CompetenceService],
+              CompetenceService,
+              ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

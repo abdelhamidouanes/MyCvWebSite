@@ -51,3 +51,18 @@ export function getMonth(mois: number, type: string): string{
     }
     return res;
 }
+
+export function getAge(dateNaissace: Date): number{
+    const todayYear = new Date().getFullYear();
+    const naissanceYear = dateNaissace.getFullYear();
+    const difference = todayYear - naissanceYear;
+    return difference;
+}
+
+export function getDomaineEmail(adrEmail: string): string {
+    return adrEmail.substring(adrEmail.indexOf('@'));
+}
+
+export function getIdentifiantEmail(adrEmail: string): string {
+    return adrEmail.substring(0, adrEmail.indexOf('@'));
+}

@@ -6,6 +6,8 @@ import { Subscription } from 'rxjs';
 import { imgFolderProfilePic } from '../Services/constantes';
 import { ProfilePic } from '../Models/ProfilePic.model';
 import { getFileName } from '../Services/methodeStatic';
+import { Profile } from '../Models/Profile.model';
+import { ProfileService } from '../Services/Profile.service';
 
 @Component({
   selector: 'app-info-p-h',
@@ -25,9 +27,13 @@ export class InfoPHComponent implements OnInit {
   profilePictures: ProfilePic[];
   profilePicturesSubscription: Subscription;
 
+  profile: Profile[];
+  profileSubscription: Subscription;
+
   constructor(private afficheMenuService: AfficheMenuService,
               private profilePicService: ProfilePicService,
-              private bgService: BgService) { }
+              private bgService: BgService,
+              private profileService: ProfileService) { }
 
   ngOnInit(): void {
     this.imgFolderProfilePic = imgFolderProfilePic;
@@ -46,6 +52,11 @@ export class InfoPHComponent implements OnInit {
       activeTheme => this.activeTheme = activeTheme
     );
     this.bgService.emitActriveTheme();
+
+    this.profileSubscription = this.profileService.profileSubject.subscribe(
+      profile => this.profile = profile
+    );
+    this.profileService.emitProfile();
   }
 
   getFileNameStatic(fileName: string): string{

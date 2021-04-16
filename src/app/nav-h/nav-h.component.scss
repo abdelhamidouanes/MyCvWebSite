@@ -3,8 +3,8 @@
   height: var(--theme-nav-height);
   position: fixed;
   top: 0;
-  z-index: 5;
   background-color: var(--theme-nav-color);
+  z-index: 10;
 }
 .transition {
   transition: all var(--time-transition) ease-in-out;
